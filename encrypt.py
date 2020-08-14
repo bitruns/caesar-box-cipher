@@ -2,9 +2,11 @@
 # Get User Input (String)
 # Covert String Into Indexable List
 # Determine length of list and find its nearest whole square root (this determines the dimensions of the caesar box)
-# Use the CEILing function to find the largest whole number close to the floated Square root
-# Starting at Index 1 of list, move every (square root number) characters to an 'encrypted' empty string variable
-# Print final encrypted string
+# Add a filler character onto imperfectly square rootable messages until its length is perfectly squarable
+# Split the now perfectly square rootable message into n groups (n is the message length square rooted)
+# Take the first character from each group and add them to a string which is then placed in a list
+# Repeat previous step with the second character in each group, then third, etc, till you have n number of box rows
+# combine each of the box rows into one string, and print the final Encrypted Message to the user
 # ---End Breakdown Pseudo Code---
 import math
 
@@ -21,11 +23,11 @@ def round_up(n, decimals=0):  # Rounds a float to the highest and nearest whole 
 
 original_message = list(str(input("Input Your Message: ")))  # Get String and convert to list
 
-split_amount = int(round_up(math.sqrt(len(original_message))))  # Finds highest perfect square for original_message
+split_amount = int(round_up(math.sqrt(len(original_message))))  # Finds nearest (round up) perfect square for original_message
 
-lines = []  # Stores each row of the caesar box
-
-encrypted_message = ""  # final string of encrypted message
+lines = []  # Stores each line of the caesar box
+-
+encrypted_message = ""  # final string of encrypted message to be returned to the user
 
 for i in range(((split_amount * split_amount) - (len(original_message)))):
     #  Finds difference between closest perfect square and the current message length

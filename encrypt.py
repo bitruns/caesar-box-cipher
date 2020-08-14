@@ -26,7 +26,7 @@ original_message = list(str(input("Input Your Message: ")))  # Get String and co
 split_amount = int(round_up(math.sqrt(len(original_message))))  # Finds nearest (round up) perfect square for original_message
 
 lines = []  # Stores each line of the caesar box
--
+
 encrypted_message = ""  # final string of encrypted message to be returned to the user
 
 for i in range(((split_amount * split_amount) - (len(original_message)))):

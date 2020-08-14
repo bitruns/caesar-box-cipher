@@ -47,7 +47,7 @@ for j in range(split_amount):
 
 print(encrypted_message)
 
-# Note: an issue with this cypher is that with a final message such as 'hoee|eurr|y  e| ot!|yvh||' an new line can be
+# Note: an issue with this cipher is that with a final message such as 'hoee|eurr|y  e| ot!|yvh||' an new line can be
 # Created at every filler (in this case the | symbol) and the message will be revealed. Allowing the cracker to skip the
 # Step of having to find the Square Root of the Message and the length. Not a massive flaw, but still a flaw nonetheless
 # Ex. hoee|eurr|y  e| ot!|yvh|| turns into
